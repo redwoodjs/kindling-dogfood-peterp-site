@@ -22,6 +22,8 @@ Complete RedwoodSDK Migration
 
 
 
+
+- [2026-04-20T06:42:36.145Z] [harness] The migration map is now concrete enough to review. I am sending it through a checkpoint before anyone starts building so gaps in scope or preservation are caught early, while they are still cheap to correct.
 - [2026-04-20T06:39:04.738Z] [harness] The inventory confirmed this is a very small site moving into a much larger application and deployment shape. The next step is to turn that inventory into a concrete migration map so the build does not improvise framework, deployment, and workflow decisions halfway through.
 - [2026-04-20T06:37:40.587Z] [harness] This project is moving a simple one-page site into a new app setup, with deployment and automation added at the same time. I am starting by cataloging everything that must survive the move so the next step can design the new structure without losing content or missing required setup.
 - [2026-04-20T06:33:58.182Z] [harness] Planning approach -- reading your brief, selecting protocol, assembling task force...
