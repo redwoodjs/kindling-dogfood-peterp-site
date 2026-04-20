@@ -1,25 +1,27 @@
 ### 2000ft View
-This repository is currently a very small personal site hosted on GitHub Pages. It presents a short bio, links to social profiles, and a list of side projects on a single static HTML page. The near-term migration target is to replace that static site with a RedwoodSDK app and a package-managed project structure, but that application scaffold does not exist yet in the current tree.
+This repository is now carrying the first RedwoodSDK scaffold for the migration path. The old static site content remains the published baseline for now, but the repo has been reshaped around a package-managed app shell with runtime entrypoints and a worker-based build pipeline so later phases can replace the content without redoing the foundation.
 
 ### System Flow
-1. The published entrypoint is `index.html` at the repository root.
-2. The page is pure HTML with inline CSS and no JavaScript runtime, build step, or asset pipeline.
-3. Browser navigation is entirely static: the page renders a heading, a short intro, a social link paragraph, and a side-project list.
-4. `CNAME` indicates the site is intended for a custom GitHub Pages domain.
-5. There is no package manager manifest, source directory, or application server entrypoint in the repo yet.
+1. The app now boots through a RedwoodSDK worker entrypoint with a matching client bootstrap.
+2. The document shell provides the HTML scaffold and global styling, while the home route renders the current migration placeholder.
+3. The project is package-managed and builds through the Cloudflare and Redwood tooling chain.
+4. The old root-level static page remains the historical content baseline, but it is no longer the only runtime shape in the tree.
+5. `CNAME` still signals the legacy GitHub Pages deployment context that the migration must eventually reconcile.
 
 ### Directory Map
 - `.github/` GitHub metadata, including the pull request template.
 - `.kindling/` Kindling task state and local orchestration metadata.
 - `.git/` Repository history and internal Git data.
-- `.docs/` Missing at the moment; expected future home for blueprints and task context.
+- `.docs/` Blueprints and migration notes, including this scaffold overview.
 - Root files:
-  - `index.html` Static site entrypoint.
+  - `index.html` Legacy static entrypoint kept during the migration transition.
   - `README.md` Brief description of the fork and its purpose.
   - `CNAME` Custom domain marker for GitHub Pages.
+  - `package.json` Package manager manifest for the RedwoodSDK app shell.
+  - `wrangler.jsonc` Worker configuration used by the scaffolded runtime.
 
 ### Key Abstractions
-`index.html` is the entire runtime surface today. It is the document served to visitors and contains all visible content and styling inline, so there is no component boundary or client-side app structure to reason about yet.
+The RedwoodSDK scaffold now owns the runtime surface for the new app shell. The HTML document, client bootstrap, and worker entrypoint cooperate to render the placeholder migration home while the legacy static page remains part of the transition context.
 
 `README.md` frames the repo as a kindling dogfood fork of `peterp/peterp.github.io`. It establishes that the repo is not the canonical upstream site and that changes here are part of the kindling workflow.
 
@@ -29,14 +31,14 @@ This repository is currently a very small personal site hosted on GitHub Pages. 
 
 ### Conventions Observed
 - The repository is currently static and minimal, with no `package.json`, lockfile, or source tree.
-- The current site content lives directly in root-level `index.html`.
-- GitHub Pages conventions are in use, including a root `CNAME`.
+- The repository now has a package manager manifest, lockfile, and source tree for the scaffolded app shell.
+- The current migration placeholder lives in the app shell rather than the original static page.
+- GitHub Pages conventions still exist in the history of the project, including a root `CNAME`, but the app scaffold introduces a separate runtime path that future work must account for.
 - Repository metadata and task workflow hints live alongside the content in `.github/` and `.kindling/`.
 - The fork identity is documented in both `README.md` and the PR template.
 
 ### Known Unknowns
-- The RedwoodSDK app scaffold has not been created yet, so the future runtime entrypoint layout is unknown.
-- The package manager choice is not declared anywhere in the repo yet.
-- Build, dev server, test, and deployment commands are not defined in the current tree.
-- The migration boundary between the old static site and the new app is not yet expressed in code.
-- There is no `src/`, `app/`, `packages/`, or equivalent application directory to map yet.
+- The scaffold builds only when the project is treated as an ESM package; the Cloudflare toolchain expects that shape for the worker bundle.
+- The worker config points at the source worker entry, while the build output is produced in the scaffolded worker and client directories.
+- The app shell intentionally stays minimal: placeholder content, shared styling, and a simple route boundary are enough for the migration foundation.
+- The legacy static page is still present as a transition marker, but the new app shell is now the runtime path that future migration work should extend.
