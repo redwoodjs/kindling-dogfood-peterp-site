@@ -1,0 +1,6 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kindling-redwoodsdk-migration",
+  "compatibility_date": "2025-08-21",
+  "main": "./dist/worker.js"
+}

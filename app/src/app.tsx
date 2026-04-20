@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 export function App() {
   return (
     <main style={styles.shell}>
@@ -13,7 +15,7 @@ export function App() {
   );
 }
 
-const styles: Record<string, React.CSSProperties> = {
+const styles: Record<string, CSSProperties> = {
   shell: {
     minHeight: "100vh",
     display: "grid",
