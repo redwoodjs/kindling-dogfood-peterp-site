@@ -11,7 +11,7 @@
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "rwsdk": "^0.0.0"
+    "rwsdk": "^0.3.6"
   },
   "devDependencies": {
     "@types/react": "^19.1.8",
