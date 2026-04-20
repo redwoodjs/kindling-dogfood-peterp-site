@@ -1,0 +1,27 @@
+---
+status: doing
+labels: []
+created: "2026-04-20T12:54:11.738Z"
+started: "2026-04-20T12:54:11.738Z"
+completed: null
+github-pr: null
+github-comments: true
+no-pr: false
+depends-on: []
+---
+
+## Brief
+
+Port Page to RedwoodSDK
+
+## Checklist
+
+## Progress Log
+
+
+
+
+- [2026-04-20T12:55:43.467Z] [harness] This is a framework conversion, so the first step is to inventory everything the current site exposes before anyone starts rebuilding it. That gives us a fixed checklist for the port and keeps the new app faithful to the existing public experience instead of redesigning it by accident.
+- [2026-04-20T12:55:16.789Z] [harness] Planning approach -- reading your brief, selecting protocol, assembling task force...
+- [2026-04-20T12:55:05.079Z] [harness] Updated draft PR with context from priming (title=true, body=true)
+- [2026-04-20T12:54:12.983Z] [harness] Understanding your codebase so agents have architectural context...
