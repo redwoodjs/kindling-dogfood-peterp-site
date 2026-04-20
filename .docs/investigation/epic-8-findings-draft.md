@@ -2,8 +2,9 @@
 
 **Repo:** redwoodjs/kindling-dogfood-peterp-site
 **Epic:** #8 — Migrate peterp.org to RedwoodSDK
-**Investigated by:** Analyst (phase 1)
-**Date:** 2026-04-20
+**Investigated by:** Analyst (phase 1, re-verified)
+**Date:** 2026-04-20 (initial)
+**Re-verified:** 2026-04-20 (second cycle — all findings confirmed unchanged)
 
 ---
 
