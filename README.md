@@ -5,15 +5,15 @@ This is the starter project for RedwoodSDK. It's a template designed to get you 
 Create your new project:
 
 ```shell
-npx create-rwsdk my-project-name
+pnpm dlx create-rwsdk create my-project-name
 cd my-project-name
-npm install
+pnpm install
 ```
 
 ## Running the dev server
 
 ```shell
-npm run dev
+pnpm dev
 ```
 
 Point your browser to the URL displayed in the terminal (e.g. `http://localhost:5173/`). You should see the RedwoodSDK welcome page in your browser.
