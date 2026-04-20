@@ -40,3 +40,4 @@ This repository is currently a very small personal site fork used as a kindling 
 - The scaffold was created in place with the RedwoodSDK generator targeting the repository root, using overwrite mode so the existing static shell could be replaced without introducing a nested starter.
 - The generated workspace is pnpm-based and the install step produces a lockfile as part of the scaffold, so later work should treat pnpm as the canonical package manager for this repo.
 - The local development surface follows the standard RedwoodSDK starter pattern and is expected to boot on the default Vite port unless future work changes that explicitly.
+- If the default development port is already in use, the local server will fall back to the next available port rather than failing the scaffold.
