@@ -26,6 +26,8 @@ Scaffold RedwoodSDK App Foundation
 
 
 
+
+- [2026-04-20T11:34:34.553Z] [harness] The initial scaffold is in place, but that alone does not make it usable for the migration. The next step is to independently confirm it starts and behaves like a valid app foundation, because later content and infrastructure work depend on that runtime being real, not just generated.
 - [2026-04-20T11:31:44.596Z] [harness] I’m starting by pinning down the scaffold shape so we create the right project foundation instead of a generic starter. That matters because this migration needs a real bootable app boundary for later content and infrastructure work, but it should not pull in the site content or deployment steps yet.
 - [2026-04-20T11:31:30.344Z] [harness] Planning approach -- reading your brief, selecting protocol, assembling task force...
 - [2026-04-20T11:31:22.840Z] [harness] Updated draft PR with context from priming (title=true, body=true)
