@@ -33,6 +33,17 @@ test('preserves the side project list and all four entries', () => {
   }
 });
 
+test('keeps the homepage structure centered on a single introduction and ordered projects', () => {
+  const h1Matches = html.match(/<h1\b/gi) ?? [];
+  const olMatches = html.match(/<ol\b/gi) ?? [];
+  const liMatches = html.match(/<li\b/gi) ?? [];
+
+  assert.equal(h1Matches.length, 1);
+  assert.equal(olMatches.length, 1);
+  assert.equal(liMatches.length, 4);
+  assert.match(html, /<ol>[\s\S]*<li>[\s\S]*<li>[\s\S]*<li>[\s\S]*<li>[\s\S]*<\/ol>/i);
+});
+
 test('keeps the narrow reading width and relaxed spacing rules', () => {
   assert.match(html, /max-width:\s*480px;/);
   assert.match(html, /line-height:\s*1\.6;/);
