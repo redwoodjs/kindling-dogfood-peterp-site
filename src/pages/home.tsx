@@ -24,10 +24,7 @@ export function HomePage() {
           &dash; Bringing full-stack to the JAMstack
         </li>
         <li>
-          <a href="https://machinen.dev">
-            <i>Machinen</i>
-          </a>{" "}
-          &dash; Coming soon...
+          <i>Machinen</i> &dash; Coming soon...
         </li>
         <li>
           <a href="https://github.com/peterp/Blackspace">
