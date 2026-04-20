@@ -29,6 +29,8 @@ Scaffold RedwoodSDK App Foundation
 
 
 
+
+- [2026-04-20T11:36:00.358Z] [harness] The build step is done, and now the priority is proving the new base app really starts the way we expect. That matters because this task is only successful if the scaffold is more than a set of files; it has to be a usable starting point for the work that comes next.
 - [2026-04-20T11:35:33.119Z] [harness] The project can now move from setup into construction because the scaffold requirements have been pinned down. That shift matters: it turns the task from “figure out the right starter” into “build the smallest usable app base we can safely verify.”
 - [2026-04-20T11:35:06.334Z] [harness] The scaffold is already far enough along to be building successfully, but it needs one more pass to make sure the baseline is clean and ready to hand off. That final check matters because this is the point where we separate a usable migration foundation from a half-finished starter.
 - [2026-04-20T11:34:34.553Z] [harness] The initial scaffold is in place, but that alone does not make it usable for the migration. The next step is to independently confirm it starts and behaves like a valid app foundation, because later content and infrastructure work depend on that runtime being real, not just generated.
