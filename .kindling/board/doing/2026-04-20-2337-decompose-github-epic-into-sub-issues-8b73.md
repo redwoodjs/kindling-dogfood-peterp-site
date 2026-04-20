@@ -44,6 +44,8 @@ Decompose GitHub Epic into Sub-Issues
 
 
 
+
+- [2026-04-20T21:44:55.544Z] [harness] Dispatching Analyst for phase 1 (investigation) of 4.
 - [2026-04-20T21:44:32.726Z] [harness] Phase 1 (Investigation) complete. Analyst gathered all gh data for Epic #8 and the 7 sub-issues. Now routing to TechLead for evidence quality review — the investigative protocol's gate before proceeding to the final findings report.
 - [2026-04-20T21:43:48.726Z] [harness] Task completed
 - [2026-04-20T21:43:22.683Z] [harness] Task paused -- waiting for review or CI

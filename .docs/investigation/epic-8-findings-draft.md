@@ -154,7 +154,7 @@ Out of scope:
 **Wave structure:**
 - **Wave 1:** #1 (serial — must complete before all others)
 - **Wave 2:** #2, #3, #4 (parallel — all depend only on #1)
-- **Wave 3:** #5 (depends on #2, #3, #4)
+- **Wave 3:** #5 (depends on #1 only — wrangler.toml is a scaffold artifact; not gated by #2, #3, or #4)
 - **Wave 4:** #6 (depends on #5)
 - **Wave 5:** #7 (depends on #6)
 
