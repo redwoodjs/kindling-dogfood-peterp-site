@@ -30,6 +30,38 @@ Scaffold rwsdk project
 
 
 
+
+
+- [2026-04-20T21:53:34.960Z] [harness] Phase 3 (Manual Verification) passed — the rwsdk dev server boots and serves on the expected port. Moving to Phase 4 (Knowledge Extraction) where the Developer notes any non-obvious generator behavior in `.docs/dev-recipes/`.
+- [2026-04-20T21:53:12.389Z] [verifier] RESULT: PASS (5/5 steps passed)
+
+## Executed Plan
+1. Inspect repo state (scaffold present, no web/ subdir, existing files preserved) -- PASS
+2. Bootstrap Playwright + Chromium (install-deps + install chromium) -- PASS
+3. Start dev server (`pnpm dev`) and confirm port binding -- PASS
+4. Browser verification via Playwright (navigate, screenshot, recordVideo) -- PASS
+5. Verify lockfile and preserved files -- PASS
+
+## Checklist
+- [x] Dev server boots without errors
+- [x] Server binds to a port (5178, auto-escalated from 5173)
+- [x] Page renders HTML in browser with visible content ("Peter Pistorius")
+- [x] Screenshot captured showing rendered page
+- [x] Video captured via Playwright recordVideo
+- [x] pnpm-lock.yaml present, package-lock.json absent, yarn.lock absent
+- [x] CNAME, README.md, index.html, .kindling/, .github/ all preserved
+
+## Proof Artifacts
+
+- Step log: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/step-log.md
+- CLI transcript: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/cli-transcript.log
+- Proof of work: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/proof-of-work.md
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@741c2099ca02ceb1fd61eb474790c86c.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@7f49efbb888b5df126b264355aa841b9.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@ce023449b56a29dbfc1309e82c89ec05.webm
+- 01-initial.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/01-initial.png
+- 01-page-load.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/01-page-load.png
+- 02-page-scrolled.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/02-page-scrolled.png
 - [2026-04-20T21:52:30.472Z] [harness] Developer completed the scaffold implementation and claimed informal verification. Per scaffold protocol, Phase 3 (Manual Verification) must be performed by the Verifier role with browser-based proof — curl is insufficient for UI-bearing scaffolds. Dispatching Verifier now.
 - [2026-04-20T21:52:26.723Z] [harness] Task stopped -- could not proceed
 - [2026-04-20T21:52:20.312Z] [harness] Implementation phase complete — the scaffold was already committed by the harness. Now running the mandatory Manual Verification gate: the Verifier boots the dev server, confirms it serves on port 5173, and captures browser screenshot proof.
