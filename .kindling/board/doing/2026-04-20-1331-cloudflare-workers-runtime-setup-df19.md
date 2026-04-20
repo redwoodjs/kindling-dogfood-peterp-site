@@ -21,6 +21,8 @@ Cloudflare Workers Runtime Setup
 
 
 
+
+- [2026-04-20T11:34:08.311Z] [harness] The groundwork is done, and we now have enough context to make the runtime changes safely. I’m moving to the build step so the app can actually be served and exercised in the intended environment, while keeping the site itself unchanged.
 - [2026-04-20T11:33:42.783Z] [harness] This work is about getting the existing site to run correctly in its intended hosting environment, not changing what the site says or how it looks. I’m starting with the runtime setup guidance so the next step can add only the configuration that is actually needed.
 - [2026-04-20T11:33:25.862Z] [harness] Planning approach -- reading your brief, selecting protocol, assembling task force...
 - [2026-04-20T11:33:19.725Z] [harness] Updated draft PR with context from priming (title=true, body=true)
