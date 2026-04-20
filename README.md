@@ -1,24 +1,17 @@
-# RedwoodSDK Minimal Starter
+# RedwoodSDK migration scaffold
 
-This is the starter project for RedwoodSDK. It's a template designed to get you up and running as quickly as possible.
+This repository is set up as the base application for the RedwoodSDK migration. It keeps the runtime and workspace wiring in place while leaving content and deployment work for later phases.
 
-Create your new project:
-
-```shell
-npx create-rwsdk my-project-name
-cd my-project-name
-npm install
-```
-
-## Running the dev server
+## Local development
 
 ```shell
-npm run dev
+pnpm install
+pnpm dev
 ```
 
-Point your browser to the URL displayed in the terminal (e.g. `http://localhost:5173/`). You should see the RedwoodSDK welcome page in your browser.
+Open the URL printed by the dev server, typically `http://localhost:5173/`.
 
-## Further Reading
+## Notes
 
-- [RedwoodSDK Documentation](https://docs.rwsdk.com/)
-- [Cloudflare Workers Documentation](https://developers.cloudflare.com/workers)
+- The repository uses pnpm and keeps the generated lockfile in source control.
+- The app shell is intentionally minimal so future migration work can build on it without starter content getting in the way.

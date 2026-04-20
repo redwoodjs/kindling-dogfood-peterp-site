@@ -1,1 +1,1 @@
-export const Home = () => <main>RedwoodSDK scaffold ready</main>;
+export const Home = () => <main />;
