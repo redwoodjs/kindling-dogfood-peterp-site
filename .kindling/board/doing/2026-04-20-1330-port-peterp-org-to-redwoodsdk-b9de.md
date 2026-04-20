@@ -24,6 +24,8 @@ Port peterp.org to RedwoodSDK
 
 
 
+
+- [2026-04-20T11:36:10.503Z] [harness] The implementation step is finished, so it now needs an adherence check before the testing path starts. That review matters now because this is where we confirm the build still matches the approved port plan and did not drift into redesign.
 - [2026-04-20T11:34:13.778Z] [harness] The conversion plan cleared review, so the work can move from design into building the new app. That shift is happening now because the preserved content and structure have been agreed, and the next risk is implementation drift rather than planning.
 - [2026-04-20T11:33:38.835Z] [harness] The conversion map is ready, so it needs a review before any implementation starts. That check is important now because we want to catch any drift from the original one-page experience before the new app structure is built on top of it.
 - [2026-04-20T11:33:15.363Z] [harness] The site inventory is done, so the next step is to turn that inventory into a concrete conversion map. That matters now because we need the exact list of preserved content and behaviors before anyone starts building the new app shape.
