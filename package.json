@@ -1,0 +1,23 @@
+{
+  "name": "peterp-org-redwoodsdk",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "release": "vite build"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "rwsdk": "^0.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/node": "^22.15.29",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
