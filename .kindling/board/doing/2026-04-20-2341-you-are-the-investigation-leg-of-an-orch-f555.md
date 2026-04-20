@@ -58,6 +58,14 @@ You are the investigation leg of an orchestrative epic  Your job
 
 
 
+
+
+
+
+- [2026-04-20T21:48:50.452Z] [harness] The investigation phase has completed. The Analyst has catalogued the repo's current state and produced findings. Now routing to the TechLead for an evidence quality check — verifying that claims are backed by direct file reads rather than inference.
+- [2026-04-20T21:48:50.449Z] [harness] Plan ready: 4 phases, investigative protocol. Task force: Analyst, TechLead.
+- [2026-04-20T21:48:48.515Z] [harness] Phase 1 investigation completed in the prior run but its findings were lost before reaching this resume context. Re-running the investigation with a directive to commit findings to disk before concluding, so the TechLead has something to review.
+- [2026-04-20T21:48:48.512Z] [harness] Plan ready: 4 phases, investigative protocol. Task force: Analyst, TechLead.
 - [2026-04-20T21:48:29.443Z] [harness] Planning approach -- reading your brief, selecting protocol, assembling task force...
 - [2026-04-20T21:48:29.235Z] [harness] Updated draft PR with context from priming (title=true, body=true)
 - [2026-04-20T21:48:26.503Z] [harness] The investigation phase has completed — the Analyst read the repo and cataloged its current state. Now the TechLead is reviewing the evidence quality to ensure every claim is backed by direct file reads rather than assumptions. This is the quality gate before the findings get written up and knowledge gets extracted for downstream child tasks.
