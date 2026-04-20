@@ -16,8 +16,15 @@ Scaffold rwsdk project
 
 ## Checklist
 
+- [x] Run rwsdk scaffold (non-interactive)
+- [x] Preserve existing files (CNAME, README.md, .kindling/, .github/)
+- [x] Remove competing lockfiles
+- [x] Run pnpm install
+- [x] Commit scaffold output + pnpm-lock.yaml
+
 ## Progress Log
 
+- [2026-04-20T23:56:00.000Z] [Developer] Phase 2 confirmed: scaffold already applied in prior cycle (commit f85bfbd). Re-confirmed state: CNAME, README.md, .kindling/, .github/ all preserved. No competing lockfiles. pnpm install verified. Working tree clean.
 
 
 
@@ -43,6 +50,11 @@ Scaffold rwsdk project
 
 
 
+
+
+
+- [2026-04-20T21:50:10.936Z] [harness] Dispatching Verifier for phase 3 (manual verification) of 5.
+- [2026-04-20T21:50:08.623Z] [harness] Dispatching Verifier for phase 3 (manual verification) of 5.
 - [2026-04-20T21:47:58.942Z] [harness] Planning approach -- reading your brief, selecting protocol, assembling task force...
 - [2026-04-20T21:47:58.614Z] [harness] Updated draft PR with context from priming (title=true, body=true)
 - [2026-04-20T21:47:55.490Z] [harness] Planning approach -- reading your brief, selecting protocol, assembling task force...
