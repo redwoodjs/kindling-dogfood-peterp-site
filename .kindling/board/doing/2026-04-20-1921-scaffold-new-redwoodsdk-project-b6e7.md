@@ -24,6 +24,14 @@ Scaffold new RedwoodSDK project
 
 
 
+
+
+- [2026-04-20T17:32:07.745Z] [harness] Dispatching Verifier for phase 3 (manual verification) of 4.
+- [2026-04-20T17:31:58.722Z] [developer] Addressed review feedback:
+
+> Change root `package.json` dev script from `"pnpm --filter web dev"` to `"pnpm --filter ./web dev"` (path-based filter, always resolves by directory regardless of package name).
+
+Changed both the `dev` and `build` root scripts to use `./web` path-based filters. Verified the filter resolves to `@redwoodjs/starter` before committing.
 - [2026-04-20T17:31:33.196Z] [harness] Dispatching Developer for phase 2 (implementation) of 4.
 - [2026-04-20T17:31:17.215Z] [verifier] RESULT: FAIL (4/5 steps passed)
 
