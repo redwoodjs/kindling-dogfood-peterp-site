@@ -23,6 +23,23 @@ Cloudflare Workers Runtime Setup
 
 
 
+
+
+- [2026-04-20T11:37:27.537Z] [harness] The core runtime work is now proven, so I’m only preserving the useful follow-on knowledge before closing this out. That keeps the project easier to pick up later without expanding the scope beyond the infrastructure change itself.
+- [2026-04-20T11:37:07.248Z] [verifier] RESULT: PASS (1/1 steps passed)
+
+## Executed Plan
+1. Started the local Workers runtime and confirmed the root request returned the existing site content -- PASS
+
+## Checklist
+- [x] Local runtime started successfully
+- [x] Root URL served the current page without content changes
+
+## Proof Artifacts
+
+- Step log: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-1331-cloudflare-workers-runtime-setup-df19/step-log.md
+- CLI transcript: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-1331-cloudflare-workers-runtime-setup-df19/cli-transcript.log
+- Proof of work: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-1331-cloudflare-workers-runtime-setup-df19/proof-of-work.md
 - [2026-04-20T11:36:12.085Z] [harness] The configuration work is in place, and now we need a live check instead of more editing. This step matters because infrastructure changes only count once the running app behaves the way the setup was meant to enable.
 <<END_STATUS>>
 
