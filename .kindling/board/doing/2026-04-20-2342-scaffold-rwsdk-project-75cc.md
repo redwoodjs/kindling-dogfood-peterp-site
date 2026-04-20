@@ -25,6 +25,7 @@ Scaffold rwsdk project
 ## Progress Log
 
 - [2026-04-20T23:56:00.000Z] [Developer] Phase 2 confirmed: scaffold already applied in prior cycle (commit f85bfbd). Re-confirmed state: CNAME, README.md, .kindling/, .github/ all preserved. No competing lockfiles. pnpm install verified. Working tree clean.
+- [2026-04-20T23:56:38.000Z] [Developer] Live verification: `pnpm dev` confirmed serving on port 5173, returning HTTP 200.
 
 
 
