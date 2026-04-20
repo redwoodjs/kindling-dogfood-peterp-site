@@ -28,8 +28,13 @@ This repository is currently a very small personal site fork used as a kindling 
 - There is no evidence yet of a package manager, build script, source directory, test suite, or deployment config.
 
 # Known Unknowns
-- The intended RedwoodSDK project structure is not present yet, so entry points, routes, and runtime ownership are still undefined.
-- The package manager and workspace layout are not defined because no `package.json`, lockfile, or workspace manifest exists.
-- The build and dev workflow are unclear because there is no app scaffold, scripts, or tooling config.
-- The deployment path is unclear beyond the presence of `CNAME`.
-- The testing strategy is unknown because no test files or test runner config are present.
+- The intended RedwoodSDK project structure was generated during the scaffold pass, but the migration still needs content and infra decisions before it becomes a real site.
+- The generator resolved the latest available starter release automatically at scaffold time, so future reruns should expect the scaffold output to vary with upstream release state.
+- The package manager and workspace layout are now pnpm-based, with a generated lockfile and workspace manifest.
+- The build and dev workflow now exists at a minimal level, but it intentionally stops short of deployment automation.
+- The deployment path remains undecided beyond the presence of the worker runtime config, which is present only as a local development scaffold.
+- The testing strategy is still limited to type checking and build verification until later migration work adds broader coverage.
+
+# Migration Notes
+- The scaffold generator emits a fuller starter than the migration currently needs, including a welcome experience and deployment-oriented defaults. Those extras were stripped back so the repository starts from a neutral application shell.
+- The local development surface follows the standard RedwoodSDK starter pattern and is expected to boot on the default Vite port unless future work changes that explicitly.
