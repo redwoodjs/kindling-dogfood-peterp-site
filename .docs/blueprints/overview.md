@@ -36,6 +36,15 @@ The current worker path is deliberately direct. Request handling stays in the wo
 
 The existing top-level `index.html` and `README.md` describe the legacy static site and the fork’s purpose, but they are not the runtime path for the new scaffold.
 
+### Setup Notes
+The worker scaffold depends on the local toolchain declared in the package manifest. A fresh checkout needs those dependencies installed before type checking or local execution will work.
+
+The TypeScript configuration must allow JSX-aware source because the worker entry imports a TSX module. This is part of the scaffold shape, even though the runtime output is still plain HTML from the worker.
+
+Local-only install and runtime artifacts stay untracked. That keeps the scaffold baseline clean while still allowing local execution through the worker dev server.
+
+The runtime proof matters more than the static shape for this phase. If the worker serves the placeholder HTML successfully and type checking stays green, the scaffold is doing its job.
+
 ### Known Unknowns
 The full RedwoodSDK application structure is not yet present. There is no confirmed router, component hierarchy, or client hydration setup in the repository.
 
