@@ -4,7 +4,7 @@
 **Epic:** #8 — Migrate peterp.org to RedwoodSDK
 **Investigated by:** Analyst (phase 1, re-verified)
 **Date:** 2026-04-20 (initial)
-**Re-verified:** 2026-04-20 (second cycle — all findings confirmed unchanged)
+**Re-verified:** 2026-04-20 (fourth cycle — stale comment counts corrected, token-scope comment captured, issues #59 and #65 added, PR #57 recorded)
 
 ---
 
@@ -25,7 +25,7 @@
  1  OPEN  Scaffold new RedwoodSDK project                       kindling-dogfood  2026-04-19
 ```
 
-Issues #1–#8 all carry label `kindling-dogfood`. Issues #48 and #52 are orchestration boards; they are not part of the migration itself.
+Issues #1–#8 all carry label `kindling-dogfood`. Issues #48, #52, #59, and #65 are orchestration/progress boards and are not part of the migration itself.
 
 ---
 
@@ -36,7 +36,7 @@ title:       Epic: Migrate peterp.org to RedwoodSDK
 state:       OPEN
 author:      justinvdm
 labels:      kindling-dogfood
-comments:    12
+comments:    14
 
 Goal:
   Rewrite the current single-file index.html site as a RedwoodSDK
@@ -106,7 +106,7 @@ title:       Port index.html content into RedwoodSDK routes/components
 state:       OPEN
 author:      justinvdm (Justin van der Merwe)
 labels:      kindling-dogfood
-comments:    0
+comments:    1
 assignees:   (none)
 projects:    (none)
 milestone:   (none)
@@ -122,6 +122,13 @@ Acceptance:
 - Home page in rwsdk renders the same content as the current `index.html`.
 - Any external links preserved.
 - Old `index.html` can be removed once cutover happens (tracked separately).
+
+---
+
+### Issue #2 — Comment (live, 2026-04-20T21:49:30Z)
+
+**Comment 1** (justinvdm):
+> ✅ **Done** — This is complete on the `feat/rwsdk-migration` branch (PR #57, SHA `18e08036`). Awaiting merge of PR #57 to land on master.
 ```
 
 ### `gh issue view 3` — Port styles to RedwoodSDK app (verbatim)
@@ -131,7 +138,7 @@ title:       Port styles to RedwoodSDK app
 state:       OPEN
 author:      justinvdm (Justin van der Merwe)
 labels:      kindling-dogfood
-comments:    0
+comments:    1
 assignees:   (none)
 projects:    (none)
 milestone:   (none)
@@ -145,6 +152,13 @@ Move the inline `<style>` block from `index.html` into the rwsdk app (CSS module
 
 Acceptance:
 - Visual parity with current site at the same viewport sizes.
+
+---
+
+### Issue #3 — Comment (live, 2026-04-20T21:49:32Z)
+
+**Comment 1** (justinvdm):
+> ✅ **Done** — This is complete on the `feat/rwsdk-migration` branch (PR #57, SHA `18e08036`). Awaiting merge of PR #57 to land on master.
 ```
 
 ### `gh issue view 4` — Verify local dev for rwsdk app (verbatim)
@@ -154,7 +168,7 @@ title:       Verify local dev for rwsdk app
 state:       OPEN
 author:      justinvdm (Justin van der Merwe)
 labels:      kindling-dogfood
-comments:    0
+comments:    1
 assignees:   (none)
 projects:    (none)
 milestone:   (none)
@@ -165,6 +179,13 @@ number:      4
 Parent: #8
 
 Sanity check: `pnpm dev` boots cleanly, all routes render, no console errors, hot reload works.
+
+---
+
+### Issue #4 — Comment (live, 2026-04-20T21:49:34Z)
+
+**Comment 1** (justinvdm):
+> ✅ **Done** — This is complete on the `feat/rwsdk-migration` branch (PR #57, SHA `18e08036`). Awaiting merge of PR #57 to land on master.
 ```
 
 ### `gh issue view 5` — Add wrangler.toml / Worker config (verbatim)
@@ -174,7 +195,7 @@ title:       Add wrangler.toml / Worker config
 state:       OPEN
 author:      justinvdm (Justin van der Merwe)
 labels:      kindling-dogfood
-comments:    0
+comments:    1
 assignees:   (none)
 projects:    (none)
 milestone:   (none)
@@ -189,6 +210,13 @@ Make sure the rwsdk-generated `wrangler.toml` (or `wrangler.jsonc`) is committed
 Acceptance:
 - `wrangler.toml` checked in.
 - `wrangler deploy --dry-run` succeeds locally.
+
+---
+
+### Issue #5 — Comment (live, 2026-04-20T21:49:36Z)
+
+**Comment 1** (justinvdm):
+> ✅ **Done** — This is complete on the `feat/rwsdk-migration` branch (PR #57, SHA `18e08036`). Awaiting merge of PR #57 to land on master.
 ```
 
 ### `gh issue view 6` — Add CI deploy workflow (verbatim)
@@ -198,7 +226,7 @@ title:       Add CI deploy workflow (GitHub Actions → Cloudflare Workers)
 state:       OPEN
 author:      justinvdm (Justin van der Merwe)
 labels:      kindling-dogfood
-comments:    0
+comments:    1
 assignees:   (none)
 projects:    (none)
 milestone:   (none)
@@ -213,6 +241,23 @@ GitHub Action that runs on push to `master` and deploys the rwsdk app to Cloudfl
 Acceptance:
 - Workflow file under `.github/workflows/`.
 - Successful deploy on the next push.
+
+---
+
+### Issue #6 — Comment (live, 2026-04-20T21:49:43Z)
+
+**Comment 1** (justinvdm):
+> ⚠️ **Blocked by token scope** — The deploy workflow YAML has been written and committed locally (commit `522c077` on `feat/rwsdk-migration`), but cannot be pushed to GitHub. The push fails with:
+>
+> ```
+> refusing to allow an OAuth App to create or update workflow `.github/workflows/deploy.yml` without `workflow` scope
+> ```
+>
+> **To unblock**: A human or CI token with the `workflow` scope (or a GitHub App with `workflows: write` permission) needs to either:
+> 1. Push the `feat/rwsdk-migration` branch (the commit is already there locally), or
+> 2. Manually create `.github/workflows/deploy.yml` with the content from PR #57's description.
+>
+> The workflow content is correct and ready — this is purely a token permissions issue.
 ```
 
 ### `gh issue view 7` — Install agent-ci for local GitHub Actions validation (verbatim)
@@ -222,7 +267,7 @@ title:       Install agent-ci for local GitHub Actions validation
 state:       OPEN
 author:      justinvdm (Justin van der Merwe)
 labels:      kindling-dogfood
-comments:    0
+comments:    1
 assignees:   (none)
 projects:    (none)
 milestone:   (none)
@@ -246,6 +291,13 @@ Acceptance:
 - Agent instructions reference agent-ci.
 
 Ref: https://agent-ci.dev
+
+---
+
+### Issue #7 — Comment (live, 2026-04-20T21:49:36Z)
+
+**Comment 1** (justinvdm):
+> ✅ **Done** — This is complete on the `feat/rwsdk-migration` branch (PR #57, SHA `18e08036`). Awaiting merge of PR #57 to land on master.
 ```
 
 ---
@@ -263,6 +315,7 @@ Ref: https://agent-ci.dev
 
 #### Issue #2 — Port index.html content into RedwoodSDK routes/components
 - **State:** OPEN
+- **Comments:** 1 (justinvdm, 2026-04-20T21:49:30Z — "Done on PR #57, SHA 18e08036")
 - **Upstream:** peterp/peterp.github.io#5
 - **Parent:** #8
 - **Body:** Move bio/links/structure from `index.html` into rwsdk route files and React components.
@@ -272,6 +325,7 @@ Ref: https://agent-ci.dev
 
 #### Issue #3 — Port styles to RedwoodSDK app
 - **State:** OPEN
+- **Comments:** 1 (justinvdm, 2026-04-20T21:49:32Z — "Done on PR #57, SHA 18e08036")
 - **Upstream:** peterp/peterp.github.io#6
 - **Parent:** #8
 - **Body:** Move inline `<style>` from `index.html` into rwsdk app (CSS module or global stylesheet).
@@ -281,6 +335,7 @@ Ref: https://agent-ci.dev
 
 #### Issue #4 — Verify local dev for rwsdk app
 - **State:** OPEN
+- **Comments:** 1 (justinvdm, 2026-04-20T21:49:34Z — "Done on PR #57, SHA 18e08036")
 - **Upstream:** peterp/peterp.github.io#7
 - **Parent:** #8
 - **Body:** Sanity check: `pnpm dev` boots cleanly, all routes render, no console errors, hot reload works.
@@ -290,6 +345,7 @@ Ref: https://agent-ci.dev
 
 #### Issue #5 — Add wrangler.toml / Worker config
 - **State:** OPEN
+- **Comments:** 1 (justinvdm, 2026-04-20T21:49:36Z — "Done on PR #57, SHA 18e08036")
 - **Upstream:** peterp/peterp.github.io#8
 - **Parent:** #8
 - **Body:** Ensure the rwsdk-generated `wrangler.toml` (or `wrangler.jsonc`) is committed with correct worker name, compatibility date, and bindings.
@@ -299,6 +355,7 @@ Ref: https://agent-ci.dev
 
 #### Issue #6 — Add CI deploy workflow (GitHub Actions → Cloudflare Workers)
 - **State:** OPEN
+- **Comments:** 1 (justinvdm, 2026-04-20T21:49:43Z — token-scope error blocking workflow push)
 - **Upstream:** peterp/peterp.github.io#9
 - **Parent:** #8
 - **Body:** GitHub Action running on push to `master` that deploys to Cloudflare via `pnpm release` (or `wrangler deploy`), using `CLOUDFLARE_API_TOKEN` repo secret. Use `pnpm/action-setup` and pnpm cache.
@@ -308,6 +365,7 @@ Ref: https://agent-ci.dev
 
 #### Issue #7 — Install agent-ci for local GitHub Actions validation
 - **State:** OPEN
+- **Comments:** 1 (justinvdm, 2026-04-20T21:49:36Z — "Done on PR #57, SHA 18e08036")
 - **Upstream:** peterp/peterp.github.io#20
 - **Parent:** #8
 - **Body:** Install `@redwoodjs/agent-ci`, confirm local workflow run via `pnpm dlx agent-ci run`, install agent skill, record instruction in `CLAUDE.md`/`AGENTS.md`.
@@ -319,15 +377,15 @@ Ref: https://agent-ci.dev
 
 ## Structured Decomposition
 
-| #  | Title | State | Work Type | Dependencies |
-|----|-------|-------|-----------|-------------|
-| 1  | Scaffold new RedwoodSDK project | CLOSED | scaffold | — |
-| 2  | Port index.html content into RedwoodSDK routes/components | OPEN | feature | #1 |
-| 3  | Port styles to RedwoodSDK app | OPEN | feature | #1 |
-| 4  | Verify local dev for rwsdk app | OPEN | verification | #1 |
-| 5  | Add wrangler.toml / Worker config | OPEN | infra | #1 |
-| 6  | Add CI deploy workflow (GitHub Actions → Cloudflare Workers) | OPEN | infra | #5 |
-| 7  | Install agent-ci for local GitHub Actions validation | OPEN | tool-setup | #6 |
+| # | Title | State | Comments | Work Type | Dependencies |
+|---|-------|-------|----------|-----------|-------------|
+| 1 | Scaffold new RedwoodSDK project | CLOSED | 2 | scaffold | — |
+| 2 | Port index.html content into RedwoodSDK routes/components | OPEN | 1 | feature | #1 |
+| 3 | Port styles to RedwoodSDK app | OPEN | 1 | feature | #1 |
+| 4 | Verify local dev for rwsdk app | OPEN | 1 | verification | #1 |
+| 5 | Add wrangler.toml / Worker config | OPEN | 1 | infra | #1 |
+| 6 | Add CI deploy workflow (GitHub Actions → Cloudflare Workers) | OPEN | 1 (token-scope blocker) | infra | #5 |
+| 7 | Install agent-ci for local GitHub Actions validation | OPEN | 1 | tool-setup | #6 |
 
 **Dependency chain:**
 ```
@@ -342,18 +400,32 @@ Ref: https://agent-ci.dev
 
 **Wave structure:**
 - **Wave 1:** #1 — CLOSED (scaffold complete, PR #63 merged)
-- **Wave 2:** #2, #3, #4 — unblocked (all depend only on #1, which is now complete; eligible to run in parallel)
-- **Wave 3:** #5 — unblocked (wrangler.toml is a scaffold artifact; not gated by #2, #3, or #4)
-- **Wave 4:** #6 — blocked (depends on #5)
-- **Wave 5:** #7 — blocked (depends on #6)
+- **Wave 2:** #2, #3, #4 — CLOSED (complete on `feat/rwsdk-migration` branch; all marked "Done" in issue comments; awaiting PR #57 merge)
+- **Wave 3:** #5 — CLOSED (complete on `feat/rwsdk-migration` branch; marked "Done" in issue comment; awaiting PR #57 merge)
+- **Wave 4:** #6 — OPEN with token-scope blocker (workflow file written locally, commit `522c077`, cannot be pushed — token lacks `workflow` scope; content ready in PR #57 description; human action required)
+- **Wave 5:** #7 — CLOSED (complete on `feat/rwsdk-migration` branch; marked "Done" in issue comment; awaiting PR #57 merge)
+
+---
+
+## Named Artifacts
+
+**PR #57** — `feat: migrate peterp.org to RedwoodSDK (epic #8)`
+- State: OPEN (not yet merged)
+- Changed files: 24
+- Lines: +6,778 / -0
+- Closes: #1, #2, #3, #4, #5, #6, #7
+- Contains: scaffold (`web/`), ported content, ported styles, wrangler config, agent-ci setup, AGENTS.md, `.docs/blueprints/overview.md`
+- **⚠️ Issue #6 blocker:** The `.github/workflows/deploy.yml` file is in PR #57 but cannot be pushed due to OAuth token lacking `workflow` scope. Contents are available in the PR description for manual file creation.
 
 ---
 
 ## Additional Findings
 
-- **Progress boards already exist:** Issue #52 is the current orchestration board (posted 2026-04-20T21:06). Issue #48 is a prior version (posted 2026-04-20T21:03). Both mirror the decomposition plan in epic #8 exactly.
-- **Implementation started:** Issue #1 is complete (PR #63 merged, 2026-04-20). Waves 2–5 are unblocked. Issues #2–#7 have not yet been started.
-- **Comments on sub-issues:** Issue #1 has 2 comments confirming completion. Issues #2–#7 have 0 comments — no agent has engaged with them yet.
+- **Progress boards already exist:** Issue #52 is the current orchestration board (posted 2026-04-20T21:06). Issue #48 is a prior version (posted 2026-04-20T21:03). Issue #59 ("Migration Epic Progress Board") and Issue #65 ("rwsdk migration: progress board") are also present — coordination artifacts, carry no `kindling-dogfood` label. All four boards mirror the decomposition plan in epic #8 exactly.
+- **Implementation in-flight:** PR #57 (`feat/rwsdk-migration`) is OPEN with 24 changed files and +6,778 lines. Issues #2, #3, #4, #5, #7 are marked "Done" in their comments (pending PR #57 merge). Issue #6 is blocked by a token-scope error.
+- **Issue #6 token-scope blocker:** The workflow file (`.github/workflows/deploy.yml`) is committed locally as `522c077` on `feat/rwsdk-migration` but the OAuth token lacks `workflow` scope, preventing the push. The file contents are available verbatim in PR #57's description. A human or token with appropriate permissions must push the branch or create the file manually.
+- **Issue #8 comment count:** Now 14 (document was accurate at 12; two additional orchestrative parent-spawn comments have been added).
+- **Comments on sub-issues:** Issue #1 has 2 comments (both confirming scaffold completion). Issues #2–#7 each have 1 comment (see per-issue sections above for verbatim text).
 - **Known unknowns captured in upstream docs:** The `.docs/blueprints/overview.md` already documents several known unknowns (scaffold directory, worker name, Cloudflare API token, `pnpm release` vs `wrangler deploy`). These do not block the decomposition but may surface during implementation.
 - **Issue #52's notes match exactly:** The progress board's dependency order note (`#1 → #2, #3, #4 → #5 → #6 → #7`) is consistent with the body text in each sub-issue.
 
@@ -363,11 +435,8 @@ Ref: https://agent-ci.dev
 
 Issue #1 (Scaffold new RedwoodSDK project) is **CLOSED** — scaffold complete, PR #63 merged, all acceptance criteria met.
 
-Issues #2–#7 remain **OPEN**. Waves 2–5 are now unblocked in sequence per the dependency chain:
+Issues #2, #3, #4, #5, and #7 are **OPEN** but marked "Done" — work is complete on the `feat/rwsdk-migration` branch (PR #57), awaiting merge of PR #57 to land on master.
 
-- Wave 2 (#2, #3, #4) is unblocked and can run in parallel.
-- Wave 3 (#5) is unblocked and can proceed.
-- Wave 4 (#6) awaits #5.
-- Wave 5 (#7) awaits #6.
+Issue #6 (CI deploy workflow) is **OPEN** and **BLOCKED** by a token-scope error. The workflow file exists locally (commit `522c077`) and its contents are in PR #57's description, but it cannot be pushed to GitHub because the current OAuth token lacks the `workflow` scope. Human action required to push the branch or create the file manually.
 
-Sub-issues #2–#7 have no comments. No implementation has started on them.
+PR #57 (`feat/rwsdk-migration`) is the central artifact — it contains all completed work for issues #2–#7, with 24 changed files and +6,778 lines. Once merged, all waves 2–5 will be resolved. The sole remaining obstruction is the Issue #6 token-scope blocker.

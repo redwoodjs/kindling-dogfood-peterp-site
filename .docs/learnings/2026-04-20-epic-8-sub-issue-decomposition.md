@@ -16,7 +16,7 @@ Issue #8 is the migration epic for peterp.org. The goal is to rewrite the curren
 
 | # | Title | State | Work Type | Dependencies |
 |---|-------|-------|-----------|--------------|
-| #1 | Scaffold new RedwoodSDK project | OPEN | **Scaffold** — run `pnpm create rwsdk` into the repo, verify `pnpm install` and `pnpm dev` work | None (starting point) |
+| #1 | Scaffold new RedwoodSDK project | **CLOSED** | **Scaffold** — run `pnpm create rwsdk` into the repo, verify `pnpm install` and `pnpm dev` work | None (starting point) |
 | #2 | Port index.html content into RedwoodSDK routes/components | OPEN | **Port** — convert bio/links HTML into React route files and components | #1 (implicit: scaffold must exist first) |
 | #3 | Port styles to RedwoodSDK app | OPEN | **Port** — move inline `<style>` block from `index.html` into rwsdk CSS (module or global) | #1 (implicit), likely parallel to #2 |
 | #4 | Verify local dev for rwsdk app | OPEN | **QA/Verification** — confirm `pnpm dev` boots cleanly, all routes render, no console errors, hot reload works | #1, #2, #3 (implicit: nothing to verify until content+styles are ported) |
@@ -59,4 +59,15 @@ Issue #8 is the migration epic for peterp.org. The goal is to rewrite the curren
 
 ## Overall Status
 
-All 7 sub-issues are **OPEN**. No work has been merged yet. The repo is currently a bare static site (`index.html`, `CNAME`, `README.md`) with no build tooling — #1 (scaffold) is the unblocked starting point for all downstream work.
+Issue #1 (Scaffold new RedwoodSDK project) is **CLOSED** — PR #63 merged, scaffold is in `web/`, all acceptance criteria confirmed in issue comments.
+
+PR #57 (`feat/rwsdk-migration`) is the central artifact — OPEN with 24 changed files and +6,778 lines. It contains completed work for issues #2–#7.
+
+Issues #2, #3, #4, #5, #7 are marked "Done" in their issue comments (awaiting PR #57 merge). Issue #6 is complete locally but **blocked** — the workflow file cannot be pushed to GitHub because the current OAuth token lacks the `workflow` scope. The file content is correct and available in PR #57's description; resolution requires a human with appropriate token permissions.
+
+**Wave structure:**
+- **Wave 1:** #1 — **CLOSED** (complete)
+- **Wave 2:** #2, #3, #4 — **OPEN** (marked "Done"; pending PR #57 merge)
+- **Wave 3:** #5 — **OPEN** (marked "Done"; pending PR #57 merge)
+- **Wave 4:** #6 — **OPEN** (blocked by token-scope error; content ready)
+- **Wave 5:** #7 — **OPEN** (marked "Done"; pending PR #57 merge)
