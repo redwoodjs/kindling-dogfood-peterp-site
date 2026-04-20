@@ -35,6 +35,46 @@ Scaffold rwsdk project
 
 
 
+
+- [2026-04-20T21:55:27.321Z] [verifier] RESULT: PASS (4/4 steps passed)
+
+## Executed Plan
+1. Prerequisites verification -- PASS
+2. Dev server boot on port 5173 -- PASS
+3. Browser renders page correctly -- PASS
+4. Preserved files intact -- PASS
+
+## Checklist
+- [x] pnpm-lock.yaml exists (175045 bytes)
+- [x] No competing lockfiles (package-lock.json, yarn.lock absent)
+- [x] CNAME preserved with "peterp.org" content
+- [x] README.md preserved with original fork notice
+- [x] .kindling/ directory preserved with board/ subdirectory
+- [x] pnpm dev serves content on port 5173
+- [x] HTTP response contains rwsdk HTML structure
+- [x] Page title is "@redwoodjs/starter-minimal"
+- [x] Browser renders "KINDLING SMOKE VERIFY OK" heading
+- [x] rwsdk hydration markers (#hydrate-root, #rwsdk-app-end) present
+- [x] Screenshot captured successfully
+- [x] Video recording captured successfully
+
+## Proof Artifacts
+
+- Step log: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/step-log.md
+- CLI transcript: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/cli-transcript.log
+- Proof of work: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/proof-of-work.md
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@22df2d03cd641022ab208ff366e00a72.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@741c2099ca02ceb1fd61eb474790c86c.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@7f49efbb888b5df126b264355aa841b9.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@ce023449b56a29dbfc1309e82c89ec05.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@e08b1d7be21beb422d89997e5ffb1850.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@f2332588d1abc0febe13062ff27cf27f.webm
+- 01-home-page.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/01-home-page.png
+- 01-initial.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/01-initial.png
+- 01-page-load.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/01-page-load.png
+- 02-page-scrolled.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/02-page-scrolled.png
+- verify-01-initial.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/verify-01-initial.png
+- verify-02-scrolled.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/verify-02-scrolled.png
 - [2026-04-20T21:55:02.467Z] [verifier] RESULT: PASS (5/5 steps passed)
 
 ## Executed Plan
