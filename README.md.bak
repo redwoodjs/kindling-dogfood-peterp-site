@@ -1,0 +1,1 @@
+> **Kindling dogfood fork.** This is a fork of [peterp/peterp.github.io](https://github.com/peterp/peterp.github.io) used as a live test example for the [kindling](https://github.com/redwoodjs/kindling) agentic harness. Pull requests, issues, and commits here are produced by kindling tasks in the course of dogfooding the agent. For the real peterp.org site, go upstream.
