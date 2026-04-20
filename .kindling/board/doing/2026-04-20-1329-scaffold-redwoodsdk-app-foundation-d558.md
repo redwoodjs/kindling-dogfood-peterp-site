@@ -32,6 +32,28 @@ Scaffold RedwoodSDK App Foundation
 
 
 
+
+
+- [2026-04-20T11:38:07.491Z] [harness] The new app base has been proven usable, so the focus shifts from building to preserving the setup knowledge that came out of it. That is the right move now because the migration work that follows will benefit from a short record of any non-obvious scaffold behavior.
+- [2026-04-20T11:37:52.393Z] [verifier] RESULT: PASS (2/2 steps passed)
+
+## Executed Plan
+1. Started the scaffold’s development server and confirmed it selected a live local port -- PASS
+2. Confirmed the served page rendered in a browser and captured proof artifacts -- PASS
+
+## Checklist
+- [x] Development server boots and reaches a live listening state
+- [x] Root surface serves real HTML and renders in a browser
+
+## Proof Artifacts
+
+- Step log: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-1329-scaffold-redwoodsdk-app-foundation-d558/step-log.md
+- CLI transcript: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-1329-scaffold-redwoodsdk-app-foundation-d558/cli-transcript.log
+- Proof of work: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-1329-scaffold-redwoodsdk-app-foundation-d558/proof-of-work.md
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-1329-scaffold-redwoodsdk-app-foundation-d558/video/page@3b70ba070c9fbec248cae9edec42c89d.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-1329-scaffold-redwoodsdk-app-foundation-d558/video/page@92e0b1027fd8828e090804b5e025ebd9.webm
+- 01-home.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-1329-scaffold-redwoodsdk-app-foundation-d558/screenshots/01-home.png
+- home.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-1329-scaffold-redwoodsdk-app-foundation-d558/screenshots/home.png
 - [2026-04-20T11:37:41.795Z] [harness] The scaffold now has a confirmed boot path, so the remaining work is about capturing anything non-obvious that future migration tasks will need to know. This is the right time to document those setup details because they are easiest to miss once the project starts growing.
 - [2026-04-20T11:37:29.993Z] [verifier] RESULT: PASS (2/2 steps passed)
 
