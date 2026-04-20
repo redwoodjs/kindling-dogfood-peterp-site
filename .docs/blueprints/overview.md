@@ -35,3 +35,4 @@ The broader deployment path is unclear beyond the new Cloudflare Workers config;
 Testing strategy is not defined. There are no existing test files or test runner configuration.
 Local development dependencies are now declared, but the repo did not previously have a package manager lockfile, so install behavior depends on the chosen package manager.
 It is unclear whether the site should support client-side routing beyond serving `index.html` at the root.
+When the repository root is used as the assets directory, local dependency folders must be excluded from asset scanning or Wrangler will try to treat installed tooling as deployable static content.
