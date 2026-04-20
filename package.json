@@ -1,0 +1,48 @@
+{
+  "name": "peterp-site",
+  "version": "1.0.0",
+  "description": "peterp.org — personal site for Peter Pistorius, built on RedwoodSDK",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "Peter Pistorius",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite dev",
+    "dev:init": "rw-scripts dev-init",
+    "preview": "vite preview",
+    "worker:run": "rw-scripts worker-run",
+    "clean": "pnpm run clean:vite",
+    "clean:vite": "rm -rf ./node_modules/.vite",
+    "release": "rw-scripts ensure-deploy-env && pnpm run clean && pnpm run build && wrangler deploy",
+    "generate": "rw-scripts ensure-env && wrangler types --include-runtime false",
+    "check": "pnpm run generate && pnpm run types",
+    "types": "tsc"
+  },
+  "dependencies": {
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "react-server-dom-webpack": "19.2.5",
+    "rwsdk": "1.2.3"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.31.0",
+    "@cloudflare/workers-types": "4.20260405.1",
+    "@redwoodjs/agent-ci": "latest",
+    "@types/node": "~25.3.5",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "typescript": "6.0.2",
+    "vite": "~7.3.2",
+    "wrangler": "4.80.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "workerd"
+    ]
+  }
+}

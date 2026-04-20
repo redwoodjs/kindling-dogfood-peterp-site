@@ -1,0 +1,7 @@
+/* Styles ported from original index.html inline <style> block */
+
+.container {
+  max-width: 480px;
+  line-height: 1.6;
+  padding: 20px;
+}
