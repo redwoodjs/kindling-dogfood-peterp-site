@@ -22,6 +22,11 @@ Cloudflare Workers Runtime Setup
 
 
 
+
+- [2026-04-20T11:36:12.085Z] [harness] The configuration work is in place, and now we need a live check instead of more editing. This step matters because infrastructure changes only count once the running app behaves the way the setup was meant to enable.
+<<END_STATUS>>
+
+<<KINDLING:DISPATCH:Verifier:phase=3>>
 - [2026-04-20T11:34:08.311Z] [harness] The groundwork is done, and we now have enough context to make the runtime changes safely. I’m moving to the build step so the app can actually be served and exercised in the intended environment, while keeping the site itself unchanged.
 - [2026-04-20T11:33:42.783Z] [harness] This work is about getting the existing site to run correctly in its intended hosting environment, not changing what the site says or how it looks. I’m starting with the runtime setup guidance so the next step can add only the configuration that is actually needed.
 - [2026-04-20T11:33:25.862Z] [harness] Planning approach -- reading your brief, selecting protocol, assembling task force...
