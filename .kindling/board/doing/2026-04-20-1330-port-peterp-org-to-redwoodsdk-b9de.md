@@ -27,6 +27,8 @@ Port peterp.org to RedwoodSDK
 
 
 
+
+- [2026-04-20T11:38:51.674Z] [harness] The revised implementation still did not clear review, so it needs another correction pass before the test path can begin. That is the right move now because the port is close enough to keep iterating, but not yet ready to move forward.
 - [2026-04-20T11:38:14.499Z] [harness] The implementation was revised, so it needs to be checked again before testing can begin. That repeat review is necessary because the earlier pass did not clear the port against the approved plan, and we need to confirm the correction actually addressed that gap.
 - [2026-04-20T11:36:53.436Z] [harness] The implementation did not clear review, so it needs another pass before testing can begin. That retry is happening now because the review gate says the port is not yet aligned tightly enough with the approved plan.
 - [2026-04-20T11:36:10.503Z] [harness] The implementation step is finished, so it now needs an adherence check before the testing path starts. That review matters now because this is where we confirm the build still matches the approved port plan and did not drift into redesign.
