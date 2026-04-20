@@ -1,0 +1,5 @@
+{
+  "name": "peterp-org",
+  "main": "src/worker.tsx",
+  "compatibility_date": "2026-04-20"
+}
