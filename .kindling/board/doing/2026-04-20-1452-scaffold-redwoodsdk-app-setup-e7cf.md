@@ -27,6 +27,10 @@ Scaffold RedwoodSDK App Setup
 
 
 
+
+
+- [2026-04-20T12:58:27.456Z] [harness] Dispatching Developer for phase 1 (priming) of 5.
+- [2026-04-20T12:58:23.744Z] [harness] Dispatching Verifier for phase 3 (manual verification) of 5.
 - [2026-04-20T12:57:48.529Z] [harness] Dispatching Developer for phase 1 (priming) of 5.
 - [2026-04-20T12:55:03.264Z] [harness] This is a scaffold-only migration step: the old static site stays in place for now while we establish the new app shell and package setup that later work will build on. I’m starting with a quick pass over the generator and runtime expectations so the scaffold matches the target framework instead of creating the wrong project shape.
 - [2026-04-20T12:54:45.718Z] [harness] Planning approach -- reading your brief, selecting protocol, assembling task force...

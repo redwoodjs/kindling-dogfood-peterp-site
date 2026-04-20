@@ -1,14 +1,5 @@
-@import "tailwindcss";
-
-@theme {
-  --color-ink: #e5eef8;
-  --color-canvas: #07111f;
-  --color-panel: rgba(10, 18, 34, 0.78);
-  --color-accent: #8dd3ff;
-}
-
 :root {
-  color: var(--color-ink);
+  color: #e5eef8;
   background:
     radial-gradient(circle at top, rgba(141, 211, 255, 0.18), transparent 34%),
     linear-gradient(160deg, #06101b 0%, #08192b 52%, #09101a 100%);
@@ -39,7 +30,7 @@ body {
   padding: clamp(2rem, 5vw, 4rem);
   border: 1px solid rgba(141, 211, 255, 0.18);
   border-radius: 28px;
-  background: var(--color-panel);
+  background: rgba(10, 18, 34, 0.78);
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(18px);
 }
@@ -49,7 +40,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-size: 0.75rem;
-  color: var(--color-accent);
+  color: #8dd3ff;
 }
 
 h1 {
