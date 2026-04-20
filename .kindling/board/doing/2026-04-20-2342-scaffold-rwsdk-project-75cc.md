@@ -32,6 +32,43 @@ Scaffold rwsdk project
 
 
 
+
+- [2026-04-20T21:54:18.924Z] [verifier] RESULT: PASS (5/5 steps passed)
+
+## Executed Plan
+1. Inspect repo state (scaffold at root, package.json with rwsdk dev script, preserved files) -- PASS
+2. Confirm dev server running on port 5178 (Vite escalated from 5173 due to port conflict) -- PASS
+3. Navigate to http://localhost:5178/ via Playwright, confirm page title "Peter Pistorius" and body text -- PASS
+4. Capture screenshots verify-01-initial.png and verify-02-scrolled.png -- PASS
+5. Verify pnpm-lock.yaml present, package-lock.json and yarn.lock absent -- PASS
+
+## Checklist
+- [x] Dev server boots (pnpm dev, Vite v7.3.2 ready in ~8s)
+- [x] Server serves HTML on a port (5178, auto-escalated from 5173)
+- [x] Browser renders page (title: "Peter Pistorius", body: 426 chars, content visible)
+- [x] Screenshot captured showing rendered page
+- [x] Video (.webm) captured via Playwright recordVideo
+- [x] pnpm-lock.yaml present at repo root
+- [x] package-lock.json absent
+- [x] yarn.lock absent
+- [x] CNAME, README.md, index.html, .kindling/, .github/ all preserved
+
+## Proof Artifacts
+
+- Step log: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/step-log.md
+- CLI transcript: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/cli-transcript.log
+- Proof of work: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/proof-of-work.md
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@741c2099ca02ceb1fd61eb474790c86c.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@7f49efbb888b5df126b264355aa841b9.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@ce023449b56a29dbfc1309e82c89ec05.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@e08b1d7be21beb422d89997e5ffb1850.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@f2332588d1abc0febe13062ff27cf27f.webm
+- 01-home-page.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/01-home-page.png
+- 01-initial.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/01-initial.png
+- 01-page-load.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/01-page-load.png
+- 02-page-scrolled.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/02-page-scrolled.png
+- verify-01-initial.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/verify-01-initial.png
+- verify-02-scrolled.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/verify-02-scrolled.png
 - [2026-04-20T21:53:34.960Z] [harness] Phase 3 (Manual Verification) passed — the rwsdk dev server boots and serves on the expected port. Moving to Phase 4 (Knowledge Extraction) where the Developer notes any non-obvious generator behavior in `.docs/dev-recipes/`.
 - [2026-04-20T21:53:12.389Z] [verifier] RESULT: PASS (5/5 steps passed)
 
