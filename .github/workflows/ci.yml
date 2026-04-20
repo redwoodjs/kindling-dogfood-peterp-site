@@ -1,0 +1,12 @@
+# Minimal placeholder CI so kindling child tasks don't dormant-wait forever
+# before the real deploy workflow (sub-issue #6) is added. Passes on any push.
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [master]
+jobs:
+  pass:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Placeholder CI — always passes until sub-issue #6 adds the real deploy workflow."
