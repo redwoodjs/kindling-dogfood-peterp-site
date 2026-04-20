@@ -59,6 +59,183 @@ Out of scope:
   - Cutting traffic over from GitHub Pages (upstream #2)
 ```
 
+### `gh issue view 1` — Scaffold new RedwoodSDK project (verbatim)
+
+```
+title:       Scaffold new RedwoodSDK project
+state:       OPEN
+author:      justinvdm (Justin van der Merwe)
+labels:      kindling-dogfood
+comments:    0
+assignees:   (none)
+projects:    (none)
+milestone:   (none)
+number:      1
+--
+**Upstream:** peterp/peterp.github.io#4
+
+Parent: #8
+
+Run `pnpm create rwsdk` (e.g. into a `web/` subfolder or a fresh branch) and check the scaffolded app builds locally.
+
+Acceptance:
+- New rwsdk project committed.
+- `pnpm install` succeeds.
+- `pnpm dev` serves on http://localhost:5173.
+- A `pnpm-lock.yaml` is committed (no `package-lock.json` / `yarn.lock`).
+
+Ref: https://docs.rwsdk.com/getting-started/quick-start/
+```
+
+### `gh issue view 2` — Port index.html content into RedwoodSDK routes/components (verbatim)
+
+```
+title:       Port index.html content into RedwoodSDK routes/components
+state:       OPEN
+author:      justinvdm (Justin van der Merwe)
+labels:      kindling-dogfood
+comments:    0
+assignees:   (none)
+projects:    (none)
+milestone:   (none)
+number:      2
+--
+**Upstream:** peterp/peterp.github.io#5
+
+Parent: #8
+
+Move the bio/links/structure currently in `index.html` into RedwoodSDK route files and React components.
+
+Acceptance:
+- Home page in rwsdk renders the same content as the current `index.html`.
+- Any external links preserved.
+- Old `index.html` can be removed once cutover happens (tracked separately).
+```
+
+### `gh issue view 3` — Port styles to RedwoodSDK app (verbatim)
+
+```
+title:       Port styles to RedwoodSDK app
+state:       OPEN
+author:      justinvdm (Justin van der Merwe)
+labels:      kindling-dogfood
+comments:    0
+assignees:   (none)
+projects:    (none)
+milestone:   (none)
+number:      3
+--
+**Upstream:** peterp/peterp.github.io#6
+
+Parent: #8
+
+Move the inline `<style>` block from `index.html` into the rwsdk app (CSS module, global stylesheet, or whatever the rwsdk default is).
+
+Acceptance:
+- Visual parity with current site at the same viewport sizes.
+```
+
+### `gh issue view 4` — Verify local dev for rwsdk app (verbatim)
+
+```
+title:       Verify local dev for rwsdk app
+state:       OPEN
+author:      justinvdm (Justin van der Merwe)
+labels:      kindling-dogfood
+comments:    0
+assignees:   (none)
+projects:    (none)
+milestone:   (none)
+number:      4
+--
+**Upstream:** peterp/peterp.github.io#7
+
+Parent: #8
+
+Sanity check: `pnpm dev` boots cleanly, all routes render, no console errors, hot reload works.
+```
+
+### `gh issue view 5` — Add wrangler.toml / Worker config (verbatim)
+
+```
+title:       Add wrangler.toml / Worker config
+state:       OPEN
+author:      justinvdm (Justin van der Merwe)
+labels:      kindling-dogfood
+comments:    0
+assignees:   (none)
+projects:    (none)
+milestone:   (none)
+number:      5
+--
+**Upstream:** peterp/peterp.github.io#8
+
+Parent: #8
+
+Make sure the rwsdk-generated `wrangler.toml` (or `wrangler.jsonc`) is committed and reflects the right worker name, compatibility date, and any bindings the site needs.
+
+Acceptance:
+- `wrangler.toml` checked in.
+- `wrangler deploy --dry-run` succeeds locally.
+```
+
+### `gh issue view 6` — Add CI deploy workflow (verbatim)
+
+```
+title:       Add CI deploy workflow (GitHub Actions → Cloudflare Workers)
+state:       OPEN
+author:      justinvdm (Justin van der Merwe)
+labels:      kindling-dogfood
+comments:    0
+assignees:   (none)
+projects:    (none)
+milestone:   (none)
+number:      6
+--
+**Upstream:** peterp/peterp.github.io#9
+
+Parent: #8
+
+GitHub Action that runs on push to `master` and deploys the rwsdk app to Cloudflare via `pnpm release` (or `wrangler deploy`). Use a `CLOUDFLARE_API_TOKEN` repo secret. Use `pnpm/action-setup` and pnpm cache in the workflow.
+
+Acceptance:
+- Workflow file under `.github/workflows/`.
+- Successful deploy on the next push.
+```
+
+### `gh issue view 7` — Install agent-ci for local GitHub Actions validation (verbatim)
+
+```
+title:       Install agent-ci for local GitHub Actions validation
+state:       OPEN
+author:      justinvdm (Justin van der Merwe)
+labels:      kindling-dogfood
+comments:    0
+assignees:   (none)
+projects:    (none)
+milestone:   (none)
+number:      7
+--
+**Upstream:** peterp/peterp.github.io#20
+
+Parent: #8
+
+Install [agent-ci](https://agent-ci.dev) (RedwoodJS's local GitHub Actions runner) so we can validate the deploy workflow (#6) locally before pushing — pauses on failures with container state preserved, no cloud round-trip.
+
+Steps:
+- `pnpm add -D @redwoodjs/agent-ci`
+- Confirm `pnpm dlx agent-ci run --workflow .github/workflows/<name>.yml` runs the deploy workflow locally end-to-end.
+- Install the agent skill: `pnpm dlx skills add redwoodjs/agent-ci --skill agent-ci`.
+- Add a note in `CLAUDE.md` / `AGENTS.md` telling agents to validate workflow changes via agent-ci before declaring done.
+
+Acceptance:
+- `@redwoodjs/agent-ci` in `devDependencies`.
+- Local run of the CI workflow succeeds (or fails with actionable output).
+- Agent instructions reference agent-ci.
+
+Ref: https://agent-ci.dev
+```
+
 ---
 
 ### `gh issue view` for each sub-issue
