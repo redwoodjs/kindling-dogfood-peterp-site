@@ -63,10 +63,10 @@ Out of scope:
 
 ```
 title:       Scaffold new RedwoodSDK project
-state:       OPEN
+state:       CLOSED
 author:      justinvdm (Justin van der Merwe)
 labels:      kindling-dogfood
-comments:    0
+comments:    2
 assignees:   (none)
 projects:    (none)
 milestone:   (none)
@@ -85,6 +85,18 @@ Acceptance:
 - A `pnpm-lock.yaml` is committed (no `package-lock.json` / `yarn.lock`).
 
 Ref: https://docs.rwsdk.com/getting-started/quick-start/
+
+---
+
+### Issue #1 — Comments (live)
+
+**Comment 1** (justinvdm, 2026-04-20T21:46:31Z):
+> Scaffolded RedwoodSDK v1.2.3 into `web/` in PR #63. Pre-existing files (README.md, CNAME, index.html) preserved. `pnpm install` succeeds, `pnpm-lock.yaml` committed, dev server verified to boot.
+
+**Comment 2** (justinvdm, 2026-04-20T21:47:29Z):
+> Verified: all acceptance criteria met. pnpm install succeeds, pnpm-lock.yaml is committed, correct source structure is in place, and the build config matches the rwsdk quickstart. Closing as complete.
+
+**Status:** CLOSED — scaffold complete. PR #63 merged. All acceptance criteria met.
 ```
 
 ### `gh issue view 2` — Port index.html content into RedwoodSDK routes/components (verbatim)
@@ -309,7 +321,7 @@ Ref: https://agent-ci.dev
 
 | #  | Title | State | Work Type | Dependencies |
 |----|-------|-------|-----------|-------------|
-| 1  | Scaffold new RedwoodSDK project | OPEN | scaffold | — |
+| 1  | Scaffold new RedwoodSDK project | CLOSED | scaffold | — |
 | 2  | Port index.html content into RedwoodSDK routes/components | OPEN | feature | #1 |
 | 3  | Port styles to RedwoodSDK app | OPEN | feature | #1 |
 | 4  | Verify local dev for rwsdk app | OPEN | verification | #1 |
@@ -329,18 +341,19 @@ Ref: https://agent-ci.dev
 ```
 
 **Wave structure:**
-- **Wave 1:** #1 (serial — must complete before all others)
-- **Wave 2:** #2, #3, #4 (parallel — all depend only on #1)
-- **Wave 3:** #5 (depends on #1 only — wrangler.toml is a scaffold artifact; not gated by #2, #3, or #4)
-- **Wave 4:** #6 (depends on #5)
-- **Wave 5:** #7 (depends on #6)
+- **Wave 1:** #1 — CLOSED (scaffold complete, PR #63 merged)
+- **Wave 2:** #2, #3, #4 — unblocked (all depend only on #1, which is now complete; eligible to run in parallel)
+- **Wave 3:** #5 — unblocked (wrangler.toml is a scaffold artifact; not gated by #2, #3, or #4)
+- **Wave 4:** #6 — blocked (depends on #5)
+- **Wave 5:** #7 — blocked (depends on #6)
 
 ---
 
 ## Additional Findings
 
-- **Progress boards already exist:** Issue #52 is the current orchestration board (posted 2026-04-20T21:06). Issue #48 is a prior version (posted 2026-04-20T21:03). Both mirror the decomposition plan in epic #8 exactly. No implementation has been started on any sub-issue.
-- **Comments on sub-issues:** All sub-issues (#1–#7) have 0 comments. No agent has engaged with them yet.
+- **Progress boards already exist:** Issue #52 is the current orchestration board (posted 2026-04-20T21:06). Issue #48 is a prior version (posted 2026-04-20T21:03). Both mirror the decomposition plan in epic #8 exactly.
+- **Implementation started:** Issue #1 is complete (PR #63 merged, 2026-04-20). Waves 2–5 are unblocked. Issues #2–#7 have not yet been started.
+- **Comments on sub-issues:** Issue #1 has 2 comments confirming completion. Issues #2–#7 have 0 comments — no agent has engaged with them yet.
 - **Known unknowns captured in upstream docs:** The `.docs/blueprints/overview.md` already documents several known unknowns (scaffold directory, worker name, Cloudflare API token, `pnpm release` vs `wrangler deploy`). These do not block the decomposition but may surface during implementation.
 - **Issue #52's notes match exactly:** The progress board's dependency order note (`#1 → #2, #3, #4 → #5 → #6 → #7`) is consistent with the body text in each sub-issue.
 
@@ -348,4 +361,13 @@ Ref: https://agent-ci.dev
 
 ## Status Summary
 
-All 7 sub-issues under Epic #8 are open with no prior work. The dependency chain is unambiguous. The decomposition is already captured in the orchestration progress board (issue #52). No sub-issue has comments, labels beyond `kindling-dogfood`, or assignees — no work has been started on any of them.
+Issue #1 (Scaffold new RedwoodSDK project) is **CLOSED** — scaffold complete, PR #63 merged, all acceptance criteria met.
+
+Issues #2–#7 remain **OPEN**. Waves 2–5 are now unblocked in sequence per the dependency chain:
+
+- Wave 2 (#2, #3, #4) is unblocked and can run in parallel.
+- Wave 3 (#5) is unblocked and can proceed.
+- Wave 4 (#6) awaits #5.
+- Wave 5 (#7) awaits #6.
+
+Sub-issues #2–#7 have no comments. No implementation has started on them.
