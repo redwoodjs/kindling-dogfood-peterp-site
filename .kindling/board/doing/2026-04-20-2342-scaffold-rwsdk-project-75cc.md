@@ -25,6 +25,66 @@ Scaffold rwsdk project
 
 ## Progress Log
 
+
+
+- [2026-04-20T21:52:06.037Z] [verifier] RESULT: PASS (4/4 steps passed)
+
+## Executed Plan
+1. Confirm pnpm-lock.yaml exists and no competing lockfiles present -- PASS
+2. Boot `pnpm dev` and confirm Vite server starts on port 5173 -- PASS
+3. Open http://localhost:5173 in browser, confirm page renders (not blank/error) -- PASS
+4. Capture screenshot and video proof -- PASS
+
+## Checklist
+- [x] `pnpm-lock.yaml` exists at repo root
+- [x] No `package-lock.json` present
+- [x] No `yarn.lock` present
+- [x] `pnpm dev` started successfully (Vite dev server)
+- [x] http://localhost:5173/ returns HTML content
+- [x] Page title: `@redwoodjs/starter-minimal`
+- [x] Smoke verify marker (`data-testid="smoke-verify-marker"`) visible in browser
+- [x] Full-page screenshot captured
+- [x] Video recording captured (.webm)
+
+## Proof Artifacts
+
+- Step log: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/step-log.md
+- CLI transcript: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/cli-transcript.log
+- Proof of work: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/proof-of-work.md
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@741c2099ca02ceb1fd61eb474790c86c.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@7f49efbb888b5df126b264355aa841b9.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@ce023449b56a29dbfc1309e82c89ec05.webm
+- 01-initial.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/01-initial.png
+- 01-page-load.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/01-page-load.png
+- 02-page-scrolled.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/02-page-scrolled.png
+- [2026-04-20T21:52:05.689Z] [verifier] RESULT: PASS (4/4 steps passed)
+
+## Executed Plan
+1. Confirmed pnpm-lock.yaml present, no competing lockfiles (no package-lock.json or yarn.lock) -- PASS
+2. Booted `pnpm dev`, confirmed Vite dev server started on port 5173 -- PASS
+3. Navigated to http://localhost:5173/ in headless Chromium, confirmed HTML response with page title "@redwoodjs/starter-minimal" -- PASS
+4. Captured screenshot and webm video as proof -- PASS
+
+## Checklist
+- [x] pnpm-lock.yaml exists at repo root
+- [x] No competing lockfiles (package-lock.json, yarn.lock) present
+- [x] `pnpm dev` boots successfully
+- [x] Dev server serves on port 5173
+- [x] Page renders HTML in browser (title: "@redwoodjs/starter-minimal", body contains "KINDLING SMOKE VERIFY OK")
+- [x] Screenshot captured
+- [x] Video (.webm) captured
+
+## Proof Artifacts
+
+- Step log: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/step-log.md
+- CLI transcript: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/cli-transcript.log
+- Proof of work: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/proof-of-work.md
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@741c2099ca02ceb1fd61eb474790c86c.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@7f49efbb888b5df126b264355aa841b9.webm
+- Verification video: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/video/page@ce023449b56a29dbfc1309e82c89ec05.webm
+- 01-initial.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/01-initial.png
+- 01-page-load.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/01-page-load.png
+- 02-page-scrolled.png: https://pub-579f92823f2d4d3f8cae58eae2630f2e.r2.dev/verification/2026-04-20-2342-scaffold-rwsdk-project-75cc/screenshots/02-page-scrolled.png
 - [2026-04-20T23:56:00.000Z] [Developer] Phase 2 confirmed: scaffold already applied in prior cycle (commit f85bfbd). Re-confirmed state: CNAME, README.md, .kindling/, .github/ all preserved. No competing lockfiles. pnpm install verified. Working tree clean.
 - [2026-04-20T23:56:38.000Z] [Developer] Live verification: `pnpm dev` confirmed serving on port 5173, returning HTTP 200.
 - [2026-04-20T23:58:00.000Z] [Developer] Phase 4 (Knowledge Extraction) complete. Added `.docs/dev-recipes/rwsdk-scaffold-notes.md` with non-obvious generator behavior. All phases complete.
