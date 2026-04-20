@@ -1,13 +1,14 @@
 {
-  "name": "peterp-github-io",
+  "name": "kindling-runtime",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
-    "start": "wrangler dev"
+    "start": "wrangler dev",
+    "deploy": "wrangler deploy"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
   }
 }
+

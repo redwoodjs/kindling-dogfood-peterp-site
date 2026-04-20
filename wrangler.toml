@@ -1,12 +1,8 @@
-name = "peterp-github-io"
+name = "kindling-runtime"
 main = "src/worker.js"
 compatibility_date = "2026-04-20"
-compatibility_flags = ["nodejs_compat"]
 
 [assets]
 directory = "."
 binding = "ASSETS"
-
-[dev]
-port = 8787
 
