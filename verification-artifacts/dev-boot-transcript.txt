@@ -1,0 +1,18 @@
+
+> peterp-site@1.0.0 dev /home/vscode/repo/web
+> vite dev
+
+(node:2817) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Default inspector port 9229 not available, using 9231 instead
+
+
+… (rwsdk) Scanning for 'use client' and 'use server' directives...
+✔ (rwsdk) Done scanning for 'use client' and 'use server' directives.
+Port 5173 is in use, trying another one...
+
+  VITE v7.3.2  ready in 2028 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: use --host to expose
+  ➜  Debug:   http://localhost:5174/__debug
