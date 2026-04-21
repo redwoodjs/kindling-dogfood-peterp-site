@@ -24,6 +24,8 @@ Set up agent-ci for workflow validation
 
 
 
+
+- [2026-04-21T21:51:29.421Z] [harness] The developer has verified their own work. Now an independent verifier will double-check that the dependency is installed, the tool runs, and the agent instructions are in place.
 - [2026-04-21T21:49:48.966Z] [harness] All three implementation steps are done. Now the developer will do a self-check to make sure the dependency, the captured tool output, and the updated guidance are all committed and correct.
 - [2026-04-21T21:49:06.518Z] [harness] The tool's help output is saved and committed. Next, the developer will update the project guidance so future agents know to validate workflow changes with this tool.
 - [2026-04-21T21:48:13.770Z] [harness] The dependency is installed and committed. Next, the developer will run the tool to see what it can do and capture the output for the record.
