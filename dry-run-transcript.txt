@@ -1,0 +1,13 @@
+Command: pnpm wrangler deploy --dry-run
+Working directory: /home/vscode/repo
+
+Output:
+ ⛅️ wrangler 4.84.1
+───────────────────
+Total Upload: 1.51 KiB / gzip: 0.81 KiB
+No bindings found.
+--dry-run: exiting now.
+
+Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+
+Exit code: 0
