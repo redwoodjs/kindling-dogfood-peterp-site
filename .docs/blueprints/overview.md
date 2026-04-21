@@ -55,7 +55,7 @@ This repository is Peter Pistorius's personal website (peterp.org), being migrat
 
 ## Known Unknowns
 
-- **Deployment configuration incomplete** — The `wrangler.jsonc` has `name: "__change_me__"` placeholder; actual worker name needs configuration
+- **Deployment configuration complete** — The `wrangler.jsonc` is configured with `name: "peterp-org"`, `compatibility_date: "2026-04-21"`, `main: "src/worker.tsx"`, and `assets.directory: "public"`. `wrangler deploy --dry-run` exits 0.
 - **No database or D1 bindings configured** — The scaffold is minimal; any data persistence will need to be added
 - **Testing strategy unclear** — No test files or test configuration present in the scaffold
 - **Build/deploy CI not configured** — Current CI workflow is a placeholder that just runs `true`
