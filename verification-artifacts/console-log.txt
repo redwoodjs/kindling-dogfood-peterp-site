@@ -1,0 +1,15 @@
+=== Console Log ===
+[debug] [vite] connecting... (http://localhost:5174/@vite/client:732)
+[info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold (http://localhost:5174/node_modules/.vite/deps/chunk-LFCFDZPA.js?v=26ce0eb5:20102)
+[error] Failed to load resource: the server responded with a status of 404 (Not Found) (http://localhost:5174/favicon.ico:)
+[debug] [vite] connected. (http://localhost:5174/@vite/client:826)
+
+=== Network Errors (4xx/5xx) ===
+
+=== Broken Images ===
+
+=== Stylesheets ===
+
+=== Scripts ===
+
+Summary: 1 errors, 0 warnings, 0 network errors

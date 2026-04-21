@@ -1,0 +1,37 @@
+{
+  "consoleLogs": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting...",
+      "url": "http://localhost:5174/@vite/client",
+      "line": 732
+    },
+    {
+      "type": "info",
+      "text": "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+      "url": "http://localhost:5174/node_modules/.vite/deps/chunk-LFCFDZPA.js?v=26ce0eb5",
+      "line": 20102
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:5174/favicon.ico",
+      "line": 0
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected.",
+      "url": "http://localhost:5174/@vite/client",
+      "line": 826
+    }
+  ],
+  "networkErrors": [],
+  "brokenImages": [],
+  "stylesheets": [],
+  "scripts": [],
+  "summary": {
+    "errors": 1,
+    "warnings": 0,
+    "notFound": 0
+  }
+}
