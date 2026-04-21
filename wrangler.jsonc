@@ -3,17 +3,18 @@
   "$schema": "node_modules/wrangler/config-schema.json",
 
   // Name of your worker
-  "name": "__change_me__",
+  "name": "peterp-org",
 
   // Entry point for your worker
   "main": "src/worker.tsx",
 
   // Compatibility settings
-  "compatibility_date": "2025-08-21",
+  "compatibility_date": "2026-04-21",
   "compatibility_flags": ["nodejs_compat"],
 
   // Assets configuration
   "assets": {
+    "directory": "public",
     "binding": "ASSETS"
   },
 
