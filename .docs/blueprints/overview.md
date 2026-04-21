@@ -28,6 +28,7 @@ This repository is Peter Pistorius's personal website (peterp.org), being migrat
 - `src/app/` — React components and application logic
 - `src/app/pages/` — Page components (home.tsx, welcome.tsx)
 - `src/app/shared/` — Shared utilities (links.ts)
+- `src/app/styles/` — Global stylesheets (global.css)
 - `types/` — TypeScript declaration files for CSS modules, rwsdk, and Vite
 
 ## Key Abstractions
@@ -45,7 +46,7 @@ This repository is Peter Pistorius's personal website (peterp.org), being migrat
 ## Conventions Observed
 
 - All source files use TypeScript with `.tsx` or `.ts` extensions
-- CSS modules are used for component styles (e.g., `welcome.module.css`)
+- Global styles are imported at the Document level via `src/app/styles/global.css`; CSS modules can be used for component-scoped styles
 - Path aliases use `@/` to reference `src/` (configured in tsconfig)
 - Pages are standalone components exported as named exports
 - The worker entry point is always `src/worker.tsx`
@@ -59,4 +60,4 @@ This repository is Peter Pistorius's personal website (peterp.org), being migrat
 - **No database or D1 bindings configured** — The scaffold is minimal; any data persistence will need to be added
 - **Testing strategy unclear** — No test files or test configuration present in the scaffold
 - **Build/deploy CI not configured** — Current CI workflow is a placeholder that just runs `true`
-- **Original site content not migrated** — The existing `index.html` with Peter's bio is preserved but not integrated into the rwsdk app
+- **Original site content migrated** — Peter's bio, links, and side-project list have been ported to the `Home` page component; global styles from `index.html` are now applied via the Document-level stylesheet
