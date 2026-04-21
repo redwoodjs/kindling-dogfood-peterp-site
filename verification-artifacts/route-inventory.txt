@@ -1,0 +1,10 @@
+Route Inventory
+===============
+
+Active routes (registered in worker.tsx):
+- / -> Home
+
+Inactive page components (not registered in router):
+- welcome.tsx (scaffolded, unused)
+
+Total routes verified: 1 (home route)
