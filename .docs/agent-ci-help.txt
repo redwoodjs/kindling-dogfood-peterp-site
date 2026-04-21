@@ -1,0 +1,37 @@
+Command: cd web && pnpm dlx @redwoodjs/agent-ci --help
+Exit code: 1
+
+---
+
+Usage: agent-ci <command> [args]
+
+Commands:
+  run [sha] --workflow <path>   Run all jobs in a workflow file (defaults to HEAD)
+  run --all                     Run all relevant PR/Push workflows for current branch
+  retry --name <name>           Send retry signal to a paused runner
+    --from-step <N>              Re-run from step N (skips earlier steps)
+    --from-start                 Re-run all run: steps from the beginning
+  abort --name <name>           Send abort signal to a paused runner
+
+Options:
+  -w, --workflow <path>         Path to the workflow file
+  -a, --all                     Discover and run all relevant workflows
+  -j, --jobs <n>                Max concurrent containers (auto-detected from CPU/memory)
+  -p, --pause-on-failure         Pause on step failure for interactive debugging
+  -q, --quiet                   Suppress animated rendering (also enabled by AI_AGENT=1)
+      --no-matrix               Collapse all matrix combinations into a single job (uses first value of each key)
+      --github-token [<token>]  GitHub token for fetching remote reusable workflows
+                                (auto-resolves via `gh auth token` if no value given)
+                                Or set: AGENT_CI_GITHUB_TOKEN env var
+      --commit-status           Post a GitHub commit status after the run (requires --github-token)
+      --var KEY=VALUE           Provide a workflow variable (${{ vars.KEY }}); repeat for multiple
+
+Secrets:
+  Workflow secrets (${{ secrets.FOO }}) are resolved from:
+    1. .env.agent-ci file in the repo root
+    2. Environment variables (shell env acts as fallback)
+    3. --github-token automatically provides secrets.GITHUB_TOKEN
+
+Vars:
+  Workflow vars (${{ vars.FOO }}) must be provided via --var FOO=VALUE.
+  The run fails if any referenced var is missing.
