@@ -24,6 +24,8 @@ Scaffold new RedwoodSDK project
 
 
 
+
+- [2026-04-21T21:19:47.277Z] [harness] The developer captured a screenshot and video of the RedwoodSDK welcome page running on localhost:5173, confirmed no sensitive files are tracked, and found no token leaks in the commit history. Moving to independent verification — the verifier will re-run the install and dev server checks, capture its own proof artifacts, and publish a verification report.
 - [2026-04-21T21:13:14.270Z] [harness] Lockfile cleanup confirmed the repository has only the pnpm lockfile with no competing npm or yarn lockfiles. Moving to proof-of-work capture — the developer will start the dev server, record a video and screenshot of the default page, and verify that no sensitive files or tokens are present in the commit history.
 - [2026-04-21T21:12:32.031Z] [harness] The dev server booted cleanly and serves the RedwoodSDK welcome page on port 5173. Moving to lockfile cleanup to confirm no competing lockfiles were generated and that only the pnpm lockfile is tracked.
 - [2026-04-21T21:11:01.021Z] [harness] The install completed successfully with exit code 0 and only a non-blocking peer-dependency warning. Moving to dev server verification to confirm the scaffolded application boots and serves on the expected port.
