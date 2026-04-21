@@ -1,0 +1,8 @@
+{
+  "name": "kindling-dogfood-peterp-site",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "@redwoodjs/agent-ci": "^0.12.4"
+  }
+}
