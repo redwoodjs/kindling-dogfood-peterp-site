@@ -1,0 +1,7 @@
+{
+  "originalText": "Hi, my name is Peter.",
+  "newText": "Hi, my name is Peter. (hot reload test)",
+  "hotReloadWorked": true,
+  "filePath": "/home/vscode/repo/web/src/app/pages/home.tsx",
+  "videoDir": "/home/vscode/repo/verification-artifacts/"
+}
