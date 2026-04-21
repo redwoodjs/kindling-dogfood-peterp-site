@@ -24,6 +24,8 @@ Brief  Verify local dev for rwsdk app  Issue 4
 
 
 
+
+- [2026-04-21T21:36:47.578Z] [harness] Phase 4 is complete: the browser console is clean — no runtime JavaScript errors, no broken stylesheets or scripts, and no unhandled promise rejections. The only message is a harmless 404 for the browser's automatic favicon request, which does not affect functionality. Now moving to Phase 5 to test hot module reloading and capture a video of it in action.
 - [2026-04-21T21:30:27.627Z] [harness] Phase 3 is complete: the home route renders fully and correctly — all bio text, social links, and project sections are visible, and a screenshot has been saved as evidence. Now moving to Phase 4 to inspect the browser console for any runtime errors, missing assets, or unhandled rejections.
 - [2026-04-21T21:23:56.663Z] [harness] Phase 2 is complete: the dev server booted successfully and its full startup transcript has been saved. Vite automatically fell back to port 5174 because 5173 was occupied — the server is healthy and running in the background. Now moving to Phase 3 to open the app in a browser and confirm the home route renders correctly.
 - [2026-04-21T21:19:10.105Z] [harness] Phase 1 finished cleanly: the developer merged the `feat/rwsdk-migration` branch into the working kindling branch, resolved a minor docs conflict, and ran `pnpm install` in `web/` which exited zero with all post-install scripts succeeding. The warnings about ignored build scripts for transitive packages are harmless. Now moving to Phase 2 to boot the dev server and capture its full startup transcript.
