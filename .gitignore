@@ -1,0 +1,8 @@
+# Proof-of-work artifacts (not committed)
+proof/
+
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
